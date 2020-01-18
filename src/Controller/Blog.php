@@ -35,7 +35,7 @@ class Blog extends AbstractController {
      * @Route("/post/save", name="save", methods={"POST"})
      */
     public function savePost() {
-        var_dump('Post saved');
+        var_dump($_POST);
         die;
     }
 
