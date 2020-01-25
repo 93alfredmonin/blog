@@ -2,5 +2,17 @@
 
 {% block body %}
     <h1> Posts list </h1> 
-    <a class ="btn" href ="/post/add.html.twig"> Add post</a> 
+    <a class ="btn" href ="/post/add"> Add post</a> 
+    <div class="post-list">
+        <ul>
+            {% for post in posts %}
+                <div class="post">
+                    <h3>{{post.title}}</h3>
+                    <i>{{ post.dateUpdate }}</i>
+                    <p>{{post.description}}</p>
+                </div>
+            {% endfor %}
+        </ul>
+    </div>
+            
 {% endblock %}
